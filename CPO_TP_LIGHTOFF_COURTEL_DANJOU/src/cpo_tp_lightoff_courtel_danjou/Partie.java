@@ -10,5 +10,16 @@ package cpo_tp_lightoff_courtel_danjou;
  * @author Utilisateur
  */
 public class Partie {
+    public String Joueur;
+    public String Grille;
+
+    public Partie(String Joueur, String Grille) {
+        this.Joueur = Joueur;
+        this.Grille = Grille;
+    }
+
     
-}
+    }
+    
+    
+

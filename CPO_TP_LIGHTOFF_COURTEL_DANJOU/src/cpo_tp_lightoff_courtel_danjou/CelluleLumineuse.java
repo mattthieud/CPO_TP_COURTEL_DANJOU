@@ -10,10 +10,15 @@ package cpo_tp_lightoff_courtel_danjou;
  */
 public class CelluleLumineuse {
     
-boolean CelluleLumineuse ;
+boolean allumée ;
     
-    public CelluleLumineuse(){
-        CelluleLumineuse = false;
+    public boolean CelluleLumineuse(){
+        if (allumée == true){
+            return true ;
+        }else {
+            return false;
+        }
+                
         
     }
     

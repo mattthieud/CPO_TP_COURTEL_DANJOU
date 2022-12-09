@@ -23,12 +23,14 @@ CelluleLumineuse est allumée ou non */
     
     public boolean ChangeEtat (){
         if (allumée== true ){
-            return false;
+            allumée = false;
         } else if (allumée == false) {
-            return true;
+            allumée = true;
         }
-    return false;    
+    return allumée;    
     }
+    
+    
 
 @Override//ecrase
 public String toString (){/*Création de la méthode toString 

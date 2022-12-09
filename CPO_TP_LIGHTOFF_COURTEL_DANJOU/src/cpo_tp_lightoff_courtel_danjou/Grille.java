@@ -10,4 +10,16 @@ package cpo_tp_lightoff_courtel_danjou;
  */
 public class Grille {
     
+    CelluleLumineuse[][] PlateauDeJeu = new CelluleLumineuse[5][5];
+    
+    public Grille() {
+        for (int i = 0; i<5; i++) {
+            for (int j = 0; i<5; j++) {
+                PlateauDeJeu[i][j] = new CelluleLumineuse();
+
+            }
+        }
+    }
 }
+
+    

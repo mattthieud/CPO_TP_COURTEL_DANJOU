@@ -20,6 +20,15 @@ public class Grille { //Création du tableau 5x5
             }
         }
     }
-}
-
     
+    public void afficherGrilleSurConsole() {
+        for (int i=4;i>=0;i--){
+        System.out.print("\n");
+        for (int j=4;j>=0;j--){
+            System.out.print(PlateauDeJeu[i][j]); 
+        }
+    }
+    }
+}
+    
+     

@@ -16,9 +16,18 @@ boolean allumée ;
 CelluleLumineuse est allumée ou non */
         if (allumée == true){
             return true ;
-        }else {
+        } else {
             return false;
         }   
+    }
+    
+    public boolean ChangeEtat (){
+        if (allumée== true ){
+            return false;
+        } else if (allumée == false) {
+            return true;
+        }
+    return false;    
     }
 
 @Override//ecrase

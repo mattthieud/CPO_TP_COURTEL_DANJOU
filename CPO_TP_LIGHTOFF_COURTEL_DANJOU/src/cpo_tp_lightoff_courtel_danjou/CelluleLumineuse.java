@@ -12,7 +12,8 @@ public class CelluleLumineuse {
     
 boolean allumée ;
     
-    public boolean CelluleLumineuse(){
+    public boolean CelluleLumineuse(){ /*Cette méthode permet de savoir si la 
+CelluleLumineuse est allumée ou non */
         if (allumée == true){
             return true ;
         }else {

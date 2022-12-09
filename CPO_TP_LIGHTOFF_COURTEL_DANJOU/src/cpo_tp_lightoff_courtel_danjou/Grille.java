@@ -8,13 +8,13 @@ package cpo_tp_lightoff_courtel_danjou;
  *
  * @author Utilisateur
  */
-public class Grille {
+public class Grille { //Création du tableau 5x5 
     
-    CelluleLumineuse[][] PlateauDeJeu = new CelluleLumineuse[5][5];
+    CelluleLumineuse[][] PlateauDeJeu = new CelluleLumineuse[5][5]; 
     
-    public Grille() {
-        for (int i = 0; i<5; i++) {
-            for (int j = 0; i<5; j++) {
+    public Grille() { 
+        for (int i = 0; i<5; i++) { //ligne 
+            for (int j = 0; i<5; j++) { //colonne
                 PlateauDeJeu[i][j] = new CelluleLumineuse();
 
             }

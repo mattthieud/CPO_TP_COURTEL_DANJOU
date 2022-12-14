@@ -9,10 +9,10 @@ package cpo_tp_lightoff_courtel_danjou;
  * @author Utilisateur
  */
 public class Joueur {
-    public String nom;
+    String nom;
 
-    public Joueur(String unNom) {
-        this.nom = unNom;
+    public Joueur(String unNom){
+         nom = unNom ;
     }
-    
+   
 }

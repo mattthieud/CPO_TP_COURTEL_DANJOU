@@ -12,19 +12,19 @@ public class CelluleLumineuse {
     
 boolean allumée ;
     
-    public boolean EtatCelluleLumineuse(){ /*Cette méthode permet de savoir si la 
+    public boolean EtatCelluleLumineuse() { /*Cette méthode permet de savoir si la 
 CelluleLumineuse est allumée ou non */
         if (allumée == true){
             return true ;
-        } else {
+        } else{
             return false;
         }   
     }
     
-    public boolean ChangeEtat (){
+    public boolean ChangeEtat() {
         if (allumée== true ){
             allumée = false;
-        } else if (allumée == false) {
+        } else if (allumée == false){
             allumée = true;
         }
     return allumée;    
@@ -33,7 +33,7 @@ CelluleLumineuse est allumée ou non */
     
 
 @Override//ecrase
-public String toString (){/*Création de la méthode toString 
+public String toString(){/*Création de la méthode toString 
 pour retourner dans la console */
         if (this.EtatCelluleLumineuse()==false){
             return "o";

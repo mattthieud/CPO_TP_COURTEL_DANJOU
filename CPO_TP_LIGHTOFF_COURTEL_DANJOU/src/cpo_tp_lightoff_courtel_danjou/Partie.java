@@ -10,16 +10,19 @@ package cpo_tp_lightoff_courtel_danjou;
  * @author Utilisateur
  */
 public class Partie {
-    public String Joueur;
-    public String Grille;
-
-    public Partie(String Joueur, String Grille) {
-        this.Joueur = Joueur;
-        this.Grille = Grille;
-    }
-
+    Joueur JoueurP;
+    Grille plateau;
+    Grille grille_jeu = new Grille();
     
+    public Partie(Joueur J) {
+        JoueurP = J;
+        this.plateau = new Grille();
     }
+    
+    public void LancerPartie() {
+        grille_jeu.afficherGrilleSurConsole();
+    }
+}
     
     
 

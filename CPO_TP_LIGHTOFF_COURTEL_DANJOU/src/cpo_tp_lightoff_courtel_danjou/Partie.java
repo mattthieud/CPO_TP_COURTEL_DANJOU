@@ -31,6 +31,10 @@ public class Partie {
         }    
     } 
     
+    public void action(int x, int y) {
+        grille_jeu.ChangeEtat(x, y);
+    }
+    
     public void LancerPartie() {
         grille_jeu.afficherGrilleSurConsole();
     }

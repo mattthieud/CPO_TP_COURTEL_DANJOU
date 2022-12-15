@@ -39,7 +39,7 @@ pour retourner dans la console */
             return "o";
         }
         if(this.EtatCelluleLumineuse()==true){
-            return"@";
+            return"#";
         }
     return "k";
     }    

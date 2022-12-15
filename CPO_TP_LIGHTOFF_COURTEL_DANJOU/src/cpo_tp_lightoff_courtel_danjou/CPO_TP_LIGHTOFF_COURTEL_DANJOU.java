@@ -17,9 +17,7 @@ public class CPO_TP_LIGHTOFF_COURTEL_DANJOU {
         // TODO code application logic here
         Joueur J = new Joueur("jul");
         Partie game = new Partie(J);
-        
-        game.LancerPartie();
-         
+        game.placerCelluleLumineuse();
+        game.LancerPartie();   
     }
-    
 }

@@ -16,18 +16,21 @@ public class Grille { //Création du tableau 5x5
         for (int i = 0; i<5; i++){ //ligne 
             for (int j = 0; j<5; j++){ //colonne
                 PlateauDeJeu[i][j] = new CelluleLumineuse();
-
             }
         }
     }
     
+    public void ChangeEtat(int i , int j) {
+        PlateauDeJeu[i][j].ChangeEtat();
+    }
+    
     public void afficherGrilleSurConsole() {
         for (int i=4;i>=0;i--){
-        System.out.print("\n");
-        for (int j=4;j>=0;j--){
-            System.out.print(PlateauDeJeu[i][j]); 
+            System.out.print("\n");
+            for (int j=4;j>=0;j--){
+                System.out.print(PlateauDeJeu[i][j]); 
+            }
         }
-    }
     }
 }
     

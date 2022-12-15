@@ -28,9 +28,10 @@ public class CPO_TP_LIGHTOFF_COURTEL_DANJOU {
         System.out.println("Quel est ton x ?");
         int x = sc.nextInt();
         System.out.println("Quel est ton x y");
-        System.out.print("\n");
         int y = sc.nextInt();
         game.action(x, y);
         game.LancerPartie();
+        System.out.print("\n");
     }
 }
+

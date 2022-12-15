@@ -27,7 +27,7 @@ public class Partie {
                 if (Math.random()>0.5){ 
                     grille_jeu.ChangeEtat(i, j);
                 }
-           }
+            }
         }    
     } 
     

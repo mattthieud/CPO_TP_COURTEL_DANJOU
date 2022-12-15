@@ -18,12 +18,12 @@ public class Grille { //Création du tableau 5x5
                 PlateauDeJeu[i][j] = new CelluleLumineuse();
             }
         }
-    }
+    }      
     
     public void ChangeEtat(int i , int j) {
         PlateauDeJeu[i][j].ChangeEtat();
     }
-    
+  
     public void afficherGrilleSurConsole() {
         for (int i=4;i>=0;i--){
             System.out.print("\n");

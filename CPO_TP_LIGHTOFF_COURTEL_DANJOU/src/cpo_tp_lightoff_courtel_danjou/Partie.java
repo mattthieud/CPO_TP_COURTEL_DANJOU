@@ -33,7 +33,7 @@ public class Partie {
     
     public void action(int x, int y) {
         grille_jeu.ChangeEtat(x, y);
-        grille_jeu.ChangeEtat(x+1, y);         
+        grille_jeu.ChangeEtat(x+1, y);
         grille_jeu.ChangeEtat(x-1, y);         
         grille_jeu.ChangeEtat(x, y+1);         
         grille_jeu.ChangeEtat(x, y-1);

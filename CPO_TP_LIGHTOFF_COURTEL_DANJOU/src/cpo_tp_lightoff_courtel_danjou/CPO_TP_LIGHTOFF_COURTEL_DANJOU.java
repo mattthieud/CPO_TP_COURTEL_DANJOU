@@ -23,8 +23,13 @@ public class CPO_TP_LIGHTOFF_COURTEL_DANJOU {
         
         game.placerCelluleLumineuse();
         game.LancerPartie();
-
-        game.action(3, 3);
+        
+        System.out.print("\n");
+        System.out.println("Quel est ton x ?");
+        int x = sc.nextInt();
+        System.out.println("Quel est ton x y");
+        int y = sc.nextInt();
+        game.action(x, y);
         game.LancerPartie();
     }
 }

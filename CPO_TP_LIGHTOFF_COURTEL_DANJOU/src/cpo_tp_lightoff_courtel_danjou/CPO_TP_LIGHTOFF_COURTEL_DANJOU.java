@@ -24,6 +24,7 @@ public class CPO_TP_LIGHTOFF_COURTEL_DANJOU {
         game.placerCelluleLumineuse();
         game.LancerPartie();
         
+        while(true) {
         System.out.print("\n");
         System.out.println("Quel est ton x ?");
         int x = sc.nextInt();
@@ -32,6 +33,7 @@ public class CPO_TP_LIGHTOFF_COURTEL_DANJOU {
         game.action(x, y);
         game.LancerPartie();
         System.out.print("\n");
+        }
     }
 }
 

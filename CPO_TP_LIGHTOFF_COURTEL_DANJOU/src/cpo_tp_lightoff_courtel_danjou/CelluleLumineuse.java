@@ -30,8 +30,6 @@ CelluleLumineuse est allumée ou non */
     return allumée;    
     }
     
-    
-
 @Override//ecrase
 public String toString(){/*Création de la méthode toString 
 pour retourner dans la console */

@@ -25,14 +25,20 @@ public class CPO_TP_LIGHTOFF_COURTEL_DANJOU {
         game.LancerPartie();
         
         while(true) {
+            
         System.out.print("\n");
         System.out.println("Quel est ton x ?");
         int x = sc.nextInt();
         System.out.println("Quel est ton x y");
         int y = sc.nextInt();
-        game.action(x, y);
+        
+        try {
+             game.action(x, y);
+        } catch (ArrayIndexOutOfBoundsException erreur) {
+            System.out.println("erreur, essaye encore!");
+        }
+       
         game.LancerPartie();
-        System.out.print("\n");
         }
     }
 }

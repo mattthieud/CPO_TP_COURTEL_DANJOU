@@ -50,6 +50,7 @@ public class Partie {
     
     public void LancerPartie() {
         grille_jeu.afficherGrilleSurConsole();
+        System.out.print("\n");
     }
 }
     

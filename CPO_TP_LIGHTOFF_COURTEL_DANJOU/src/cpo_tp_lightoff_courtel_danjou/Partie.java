@@ -33,7 +33,7 @@ public class Partie {
 
     public void action(int x, int y) {
         grille_jeu.ChangeEtat(x, y);
-        /*if (x < 5 - 1) {
+        if (x < 5 - 1) {
             grille_jeu.ChangeEtat(x+1, y);
         }
         if (x > 0) {
@@ -44,7 +44,7 @@ public class Partie {
         }         
         if (y > 0) {
             grille_jeu.ChangeEtat(x, y-1);
-        }*/
+        }
     }  
       
     public void LancerPartie() {

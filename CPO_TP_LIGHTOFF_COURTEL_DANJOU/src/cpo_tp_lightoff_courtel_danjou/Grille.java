@@ -31,7 +31,16 @@ public class Grille { //Création du tableau 5x5
                 System.out.print(PlateauDeJeu[i][j]); 
             }
         }
-    }
-}
+    } 
     
-     
+    public boolean Grilleteinte() { 
+        for (int i = 0; i<5; i++){ //ligne 
+            for (int j = 0; j<5; j++){ //colonne
+                if (PlateauDeJeu[i][j].EtatCelluleLumineuse()==true) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }     
+}     

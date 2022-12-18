@@ -12,7 +12,6 @@ public class Joueur {
     String nom;
 
     public Joueur(String unNom){
-         nom = unNom ;
+        nom = unNom ;
     }
-   
 }

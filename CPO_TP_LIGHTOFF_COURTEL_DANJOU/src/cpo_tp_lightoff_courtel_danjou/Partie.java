@@ -30,24 +30,23 @@ public class Partie {
             }
         }    
     } 
-    
+
     public void action(int x, int y) {
         grille_jeu.ChangeEtat(x, y);
-        if (x<5 - 1) {
+        /*if (x < 5 - 1) {
             grille_jeu.ChangeEtat(x+1, y);
         }
-        if (x>0) {
+        if (x > 0) {
             grille_jeu.ChangeEtat(x-1, y);
         }
-        if (y<5 - 1) {
+        if (y < 5 - 1) {
             grille_jeu.ChangeEtat(x, y+1);
         }         
-        if (y>0) {
+        if (y > 0) {
             grille_jeu.ChangeEtat(x, y-1);
-        }
-    }
-    
-    
+        }*/
+    }  
+      
     public void LancerPartie() {
         grille_jeu.afficherGrilleSurConsole();
         System.out.print("\n");

@@ -24,7 +24,7 @@ public class CPO_TP_LIGHTOFF_COURTEL_DANJOU {
         game.placerCelluleLumineuse();
         game.LancerPartie();
         
-        while(true) {
+        while(game.grille_jeu.Grilleteinte()) {
             
         System.out.print("\n");
         System.out.println("Quel est ton x ?");
@@ -40,6 +40,8 @@ public class CPO_TP_LIGHTOFF_COURTEL_DANJOU {
        
         game.LancerPartie();
         }
+        
+        System.out.println("Vous avez gagne la partie!");
     }
 }
 

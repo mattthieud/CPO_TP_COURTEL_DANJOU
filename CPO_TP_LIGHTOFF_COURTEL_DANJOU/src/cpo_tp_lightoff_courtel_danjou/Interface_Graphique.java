@@ -9,12 +9,21 @@ package cpo_tp_lightoff_courtel_danjou;
  * @author jules
  */
 public class Interface_Graphique extends javax.swing.JFrame {
-
+    Joueur JoueurP;
+    Grille plateau;
+    Grille grille_jeu = new Grille();
     /**
      * Creates new form Interface_Graphique
      */
     public Interface_Graphique() {
         initComponents();
+
+        for (int i = 4; i >= 0; i--) {
+            for (int j = 0; i < 5; j++) {
+                CelluleGraphique cellGraph = new CelluleGraphique();
+                panneau_grille.add(cellGraph);
+            }
+        }
     }
 
     /**
@@ -26,20 +35,17 @@ public class Interface_Graphique extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        panneau_grille = new javax.swing.JPanel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(102, 102, 102));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 701, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 701, Short.MAX_VALUE)
-        );
+        panneau_grille.setBackground(new java.awt.Color(255, 255, 255));
+        panneau_grille.setLayout(new java.awt.GridLayout(5, 5));
+        getContentPane().add(panneau_grille, new org.netbeans.lib.awtextra.AbsoluteConstraints(14, 14, 672, 672));
 
-        pack();
+        setBounds(0, 0, 714, 707);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
@@ -78,5 +84,6 @@ public class Interface_Graphique extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel panneau_grille;
     // End of variables declaration//GEN-END:variables
 }

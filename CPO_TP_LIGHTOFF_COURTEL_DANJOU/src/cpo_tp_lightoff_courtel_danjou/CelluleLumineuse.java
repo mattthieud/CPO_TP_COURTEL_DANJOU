@@ -16,7 +16,7 @@ boolean allumée ;
 CelluleLumineuse est allumée ou non */
         if (allumée == true){
             return true ;
-        } else{
+        } else {
             return false;
         }   
     }

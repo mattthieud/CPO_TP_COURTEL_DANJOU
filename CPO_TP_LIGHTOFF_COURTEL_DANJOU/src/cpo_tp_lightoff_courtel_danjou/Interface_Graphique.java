@@ -19,8 +19,9 @@ public class Interface_Graphique extends javax.swing.JFrame {
         initComponents();
 
         for (int i = 4; i >= 0; i--) {
-            for (int j = 0; i < 5; j++) {
-                CelluleGraphique cellGraph = new CelluleGraphique();
+            for (int j = 0; j < 5; j++) {
+                this.pack();
+                CelluleGraphique cellGraph = new CelluleGraphique(grille_jeu.PlateauDeJeu[i][j]);
                 panneau_grille.add(cellGraph);
             }
         }

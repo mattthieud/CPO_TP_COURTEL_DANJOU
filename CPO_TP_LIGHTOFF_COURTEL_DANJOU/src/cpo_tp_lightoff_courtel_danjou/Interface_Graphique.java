@@ -25,6 +25,36 @@ public class Interface_Graphique extends javax.swing.JFrame {
                 panneau_grille.add(cellGraph);
             }
         }
+    } 
+    
+    public void placerCelluleLumineuse() { 
+        for (int i = 0; i<5; i++){ //ligne 
+           for (int j = 0; j<5; j++){ //colonne
+                if (Math.random()>0.5){ 
+                    grille_jeu.ChangeEtat(i, j);
+                }
+            }
+        }    
+    } 
+
+    public void action(int x, int y) {
+        grille_jeu.ChangeEtat(x, y);
+        if (x < 5 - 1) {
+            grille_jeu.ChangeEtat(x+1, y);
+        }
+        if (x > 0) {
+            grille_jeu.ChangeEtat(x-1, y);
+        }
+        if (y < 5 - 1) {
+            grille_jeu.ChangeEtat(x, y+1);
+        }         
+        if (y > 0) {
+            grille_jeu.ChangeEtat(x, y-1);
+        }
+    }  
+      
+    public void initialiserPartie() {
+        this.placerCelluleLumineuse();   
     }
 
     /**
@@ -37,17 +67,32 @@ public class Interface_Graphique extends javax.swing.JFrame {
     private void initComponents() {
 
         panneau_grille = new javax.swing.JPanel();
+        btn_start = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(102, 102, 102));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        panneau_grille.setBackground(new java.awt.Color(255, 255, 255));
+        panneau_grille.setBackground(new java.awt.Color(0, 102, 204));
         panneau_grille.setLayout(new java.awt.GridLayout(5, 5));
         getContentPane().add(panneau_grille, new org.netbeans.lib.awtextra.AbsoluteConstraints(14, 14, 672, 672));
 
-        setBounds(0, 0, 714, 707);
+        btn_start.setText("Lancer Partie");
+        btn_start.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_startActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn_start, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 210, 100, 70));
+
+        setBounds(0, 0, 814, 707);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn_startActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_startActionPerformed
+        panneau_grille.repaint();
+        initialiserPartie();
+        btn_start.setEnabled(false);
+    }//GEN-LAST:event_btn_startActionPerformed
 
     /**
      * @param args the command line arguments
@@ -85,6 +130,7 @@ public class Interface_Graphique extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_start;
     private javax.swing.JPanel panneau_grille;
     // End of variables declaration//GEN-END:variables
 }

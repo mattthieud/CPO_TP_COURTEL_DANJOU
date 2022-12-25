@@ -22,7 +22,17 @@ public class Interface_Graphique extends javax.swing.JFrame {
             for (int j = 0; j < 5; j++) {
                 this.pack();
                 CelluleGraphique cellGraph = new CelluleGraphique(grille_jeu.PlateauDeJeu[i][j]);
-                panneau_grille.add(cellGraph);
+                
+                cellGraph.addActionListener(new java.awt.event.ActionListener() {
+                    public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    CelluleLumineuse c = cellGraph.celluleAssociee;
+                    final int x = i;
+                    final int y = j; 
+                    action(x, y);
+                    }
+                });
+               
+             panneau_grille.add(cellGraph);
             }
         }
     } 
@@ -54,7 +64,7 @@ public class Interface_Graphique extends javax.swing.JFrame {
     }  
       
     public void initialiserPartie() {
-        this.placerCelluleLumineuse();   
+        this.placerCelluleLumineuse(); 
     }
 
     /**
@@ -71,21 +81,28 @@ public class Interface_Graphique extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(102, 102, 102));
+        setMinimumSize(new java.awt.Dimension(790, 700));
+        setPreferredSize(new java.awt.Dimension(676, 737));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         panneau_grille.setBackground(new java.awt.Color(0, 102, 204));
         panneau_grille.setLayout(new java.awt.GridLayout(5, 5));
-        getContentPane().add(panneau_grille, new org.netbeans.lib.awtextra.AbsoluteConstraints(14, 14, 672, 672));
+        getContentPane().add(panneau_grille, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 2, 672, 672));
 
+        btn_start.setBackground(new java.awt.Color(153, 153, 153));
+        btn_start.setFont(new java.awt.Font("Bahnschrift", 0, 11)); // NOI18N
+        btn_start.setForeground(new java.awt.Color(255, 255, 255));
         btn_start.setText("Lancer Partie");
+        btn_start.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btn_start.setIconTextGap(5);
         btn_start.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_startActionPerformed(evt);
             }
         });
-        getContentPane().add(btn_start, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 210, 100, 70));
+        getContentPane().add(btn_start, new org.netbeans.lib.awtextra.AbsoluteConstraints(674, 1, 100, 674));
 
-        setBounds(0, 0, 814, 707);
+        setBounds(0, 0, 788, 683);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_startActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_startActionPerformed

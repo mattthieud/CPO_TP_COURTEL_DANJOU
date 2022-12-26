@@ -36,7 +36,7 @@ public class Interface_Graphique extends javax.swing.JFrame {
                     panneau_grille.repaint();
                     
                     if(grille_jeu.Grilleteinte() == true) {    
-                        message.setText("Bravo, vous avez gagné la partie !");
+                        message.setText("Félicitation, vous avez remporté la partie de LigthOff !!");
                         btn_start.setEnabled(true);
                     }
                     }
@@ -135,7 +135,7 @@ public class Interface_Graphique extends javax.swing.JFrame {
     private void btn_startActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_startActionPerformed
         panneau_grille.repaint();
         initialiserPartie();
-        message.setText("Nouvelle partie, bonne chance !");
+        message.setText("La grille de jeu est composée de 2 couleurs : jaune pour les cellules allumées & bleue pour celles éteintes. Le but est de l'éteindre entierement.");
         btn_start.setEnabled(false);
     }//GEN-LAST:event_btn_startActionPerformed
 

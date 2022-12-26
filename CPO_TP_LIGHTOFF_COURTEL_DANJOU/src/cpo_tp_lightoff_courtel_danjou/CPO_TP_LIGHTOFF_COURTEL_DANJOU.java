@@ -29,7 +29,7 @@ public class CPO_TP_LIGHTOFF_COURTEL_DANJOU {
         System.out.print("\n");
         System.out.println("Quel est ton x ? (vertical du haut 4 vers le bas 0)");
         int x = sc.nextInt();
-        System.out.println("Quel est ton y ? (horizontal de droite 4 à gauche 0)");
+        System.out.println("Quel est ton y ? (horizontal de droite 4 a gauche 0)");
         int y = sc.nextInt();
         
         try {

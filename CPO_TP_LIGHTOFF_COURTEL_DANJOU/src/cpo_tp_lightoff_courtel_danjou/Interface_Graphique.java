@@ -4,6 +4,9 @@
  */
 package cpo_tp_lightoff_courtel_danjou;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author jules
@@ -20,19 +23,19 @@ public class Interface_Graphique extends javax.swing.JFrame {
 
         for (int i = 4; i >= 0; i--) {
             for (int j = 0; j < 5; j++) {
+                final int x = i;
+                final int y = j; 
+                
                 this.pack();
                 CelluleGraphique cellGraph = new CelluleGraphique(grille_jeu.PlateauDeJeu[i][j]);
-                
-                cellGraph.addActionListener(new java.awt.event.ActionListener() {
-                    public void actionPerformed(java.awt.event.ActionEvent evt) {
-                    CelluleLumineuse c = cellGraph.celluleAssociee;
-                    final int x = i;
-                    final int y = j; 
+                panneau_grille.add(cellGraph);
+                cellGraph.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
                     action(x, y);
+                    panneau_grille.repaint();
                     }
-                });
-               
-             panneau_grille.add(cellGraph);
+                }); 
             }
         }
     } 

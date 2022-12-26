@@ -27,9 +27,9 @@ public class CPO_TP_LIGHTOFF_COURTEL_DANJOU {
         while(game.grille_jeu.Grilleteinte()) {
             
         System.out.print("\n");
-        System.out.println("Quel est ton x ?");
+        System.out.println("Quel est ton x ? (vertical du haut 4 vers le bas 0)");
         int x = sc.nextInt();
-        System.out.println("Quel est ton x y");
+        System.out.println("Quel est ton y ? (horizontal de droite 4 à gauche 0)");
         int y = sc.nextInt();
         
         try {

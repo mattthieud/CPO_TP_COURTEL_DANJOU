@@ -34,6 +34,11 @@ public class Interface_Graphique extends javax.swing.JFrame {
                     public void actionPerformed(ActionEvent e) {
                     action(x, y);
                     panneau_grille.repaint();
+                    
+                    if(grille_jeu.Grilleteinte() == true) {    
+                        message.setText("Bravo, vous avez gagné la partie !");
+                        btn_start.setEnabled(true);
+                    }
                     }
                 }); 
             }
@@ -52,7 +57,7 @@ public class Interface_Graphique extends javax.swing.JFrame {
 
     public void action(int x, int y) {
         grille_jeu.ChangeEtat(x, y);
-        if (x < 5 - 1) {
+       /* if (x < 5 - 1) {
             grille_jeu.ChangeEtat(x+1, y);
         }
         if (x > 0) {
@@ -63,7 +68,7 @@ public class Interface_Graphique extends javax.swing.JFrame {
         }         
         if (y > 0) {
             grille_jeu.ChangeEtat(x, y-1);
-        }
+        }*/
     }  
       
     public void initialiserPartie() {
@@ -79,13 +84,22 @@ public class Interface_Graphique extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jFrame1 = new javax.swing.JFrame();
+        jFrame2 = new javax.swing.JFrame();
+        jSeparator1 = new javax.swing.JSeparator();
+        jColorChooser1 = new javax.swing.JColorChooser();
+        filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 32767));
         panneau_grille = new javax.swing.JPanel();
         btn_start = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        message = new javax.swing.JTextArea();
+        jSeparator2 = new javax.swing.JSeparator();
+        jSeparator3 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(102, 102, 102));
+        setBounds(new java.awt.Rectangle(720, 0, 0, 0));
         setMinimumSize(new java.awt.Dimension(790, 700));
-        setPreferredSize(new java.awt.Dimension(676, 737));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         panneau_grille.setBackground(new java.awt.Color(0, 102, 204));
@@ -94,8 +108,9 @@ public class Interface_Graphique extends javax.swing.JFrame {
 
         btn_start.setBackground(new java.awt.Color(153, 153, 153));
         btn_start.setFont(new java.awt.Font("Bahnschrift", 0, 11)); // NOI18N
-        btn_start.setForeground(new java.awt.Color(255, 255, 255));
+        btn_start.setForeground(new java.awt.Color(0, 102, 153));
         btn_start.setText("Lancer Partie");
+        btn_start.setBorder(null);
         btn_start.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btn_start.setIconTextGap(5);
         btn_start.addActionListener(new java.awt.event.ActionListener() {
@@ -103,14 +118,24 @@ public class Interface_Graphique extends javax.swing.JFrame {
                 btn_startActionPerformed(evt);
             }
         });
-        getContentPane().add(btn_start, new org.netbeans.lib.awtextra.AbsoluteConstraints(674, 1, 100, 674));
+        getContentPane().add(btn_start, new org.netbeans.lib.awtextra.AbsoluteConstraints(674, 1, 105, 674));
 
-        setBounds(0, 0, 788, 683);
+        message.setColumns(20);
+        message.setRows(5);
+        jScrollPane1.setViewportView(message);
+        message.getAccessibleContext().setAccessibleParent(message);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 670, 780, 40));
+        getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 700, -1, -1));
+        getContentPane().add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 710, -1, -1));
+
+        setBounds(0, 0, 794, 711);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_startActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_startActionPerformed
         panneau_grille.repaint();
         initialiserPartie();
+        message.setText("Nouvelle partie, bonne chance !");
         btn_start.setEnabled(false);
     }//GEN-LAST:event_btn_startActionPerformed
 
@@ -151,6 +176,15 @@ public class Interface_Graphique extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_start;
+    private javax.swing.Box.Filler filler1;
+    private javax.swing.JColorChooser jColorChooser1;
+    private javax.swing.JFrame jFrame1;
+    private javax.swing.JFrame jFrame2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JTextArea message;
     private javax.swing.JPanel panneau_grille;
     // End of variables declaration//GEN-END:variables
 }

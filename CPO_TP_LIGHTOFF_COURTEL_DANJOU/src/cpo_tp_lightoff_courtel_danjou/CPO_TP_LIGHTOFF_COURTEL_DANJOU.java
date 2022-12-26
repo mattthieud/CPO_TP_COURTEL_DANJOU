@@ -41,7 +41,7 @@ public class CPO_TP_LIGHTOFF_COURTEL_DANJOU {
         game.LancerPartie();
         }
         
-        System.out.println("Vous avez gagne la partie!");
+        System.out.println("Félicitation, vous avez remporté la partie de LigthOff !!");
     }
 }
 

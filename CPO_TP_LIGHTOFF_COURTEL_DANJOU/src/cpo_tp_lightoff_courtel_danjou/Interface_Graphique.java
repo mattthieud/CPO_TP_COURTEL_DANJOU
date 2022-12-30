@@ -34,7 +34,7 @@ public class Interface_Graphique extends javax.swing.JFrame {
                     action(x, y);
                     panneau_grille.repaint();
                     
-                    if(grille_jeu.Grilleteinte() == true) {    
+                    if(grille_jeu.Grilleteinte() == false) {    
                         message.setText("Félicitation, vous avez remporté la partie de LigthOff !!");
                         btn_start.setEnabled(true);
                     }
@@ -56,7 +56,7 @@ public class Interface_Graphique extends javax.swing.JFrame {
 
     public void action(int x, int y) {
         grille_jeu.ChangeEtat(x, y);
-       /* if (x < 5 - 1) {
+        if (x < 5 - 1) {
             grille_jeu.ChangeEtat(x+1, y);
         }
         if (x > 0) {
@@ -67,7 +67,7 @@ public class Interface_Graphique extends javax.swing.JFrame {
         }         
         if (y > 0) {
             grille_jeu.ChangeEtat(x, y-1);
-        }*/
+        }
     }  
       
     public void initialiserPartie() {
@@ -117,7 +117,7 @@ public class Interface_Graphique extends javax.swing.JFrame {
                 btn_startActionPerformed(evt);
             }
         });
-        getContentPane().add(btn_start, new org.netbeans.lib.awtextra.AbsoluteConstraints(674, 1, 105, 674));
+        getContentPane().add(btn_start, new org.netbeans.lib.awtextra.AbsoluteConstraints(674, 1, 107, 674));
 
         message.setColumns(20);
         message.setRows(5);

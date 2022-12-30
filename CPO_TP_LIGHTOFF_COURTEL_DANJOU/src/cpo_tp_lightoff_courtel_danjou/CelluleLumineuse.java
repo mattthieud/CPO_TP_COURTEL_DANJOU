@@ -16,9 +16,10 @@ boolean allumée ;
 CelluleLumineuse est allumée ou non */
         if (allumée == true){
             return true ;
-        } else {
+        } else if (allumée == false){
             return false;
-        }   
+        } 
+        return false;
     }
     
     public boolean ChangeEtat() {

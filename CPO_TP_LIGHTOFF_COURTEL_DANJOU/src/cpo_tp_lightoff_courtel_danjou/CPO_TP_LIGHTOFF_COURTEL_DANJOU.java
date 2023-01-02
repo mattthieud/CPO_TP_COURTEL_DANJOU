@@ -24,7 +24,8 @@ public class CPO_TP_LIGHTOFF_COURTEL_DANJOU {
         game.placerCelluleLumineuse();
         game.LancerPartie();
         
-        while(game.grille_jeu.Grilleteinte()) {
+        while(game.grille_jeu.Grilleteinte()) {/*tant que la grille de jeu 
+n'est pas complétment éteinte, le jeu continue*/
             
         System.out.print("\n");
         System.out.println("Quel est ton x ? (vertical du haut 4 vers le bas 0)");
@@ -34,7 +35,10 @@ public class CPO_TP_LIGHTOFF_COURTEL_DANJOU {
         
         try {
              game.action(x, y);
-        } catch (ArrayIndexOutOfBoundsException erreur) {
+        } catch (ArrayIndexOutOfBoundsException erreur) { /*Cette méthode permet 
+de d'assurer si la saissie de l'utilisateur est conforme ou non pour placer les 
+cellules lumineuses. Si elle ne l'est pas alors elle affiche un message d'erreur 
+à l'utilisateur*/
             System.out.println("erreur, essaye encore!");
         }
        

@@ -13,7 +13,8 @@ public class CelluleLumineuse {
 boolean allumée ;
     
     public boolean EtatCelluleLumineuse() { /*Cette méthode permet de savoir si la 
-CelluleLumineuse est allumée ou non */
+cellule lumineuse est allumée (renvoie true) ou éteinte(renvoie false) et renvoie 
+également false si toutes les cellules lumineuses sont éteintes*/
         if (allumée == true){
             return true ;
         } else if (allumée == false){
@@ -22,7 +23,9 @@ CelluleLumineuse est allumée ou non */
         return false;
     }
     
-    public boolean ChangeEtat() {
+    public boolean ChangeEtat() { /*Cette méthode permet de changer l'état d'une 
+cellule lumineuse allumée en éteinte ou inversement éteinte en allumée et renvoie 
+l'état de la cellule lumineuse*/
         if (allumée== true ){
             allumée = false;
         } else if (allumée == false){

@@ -12,7 +12,9 @@ public class Grille { //Création du tableau 5x5
     
     CelluleLumineuse[][] PlateauDeJeu = new CelluleLumineuse[5][5]; 
     
-    public Grille() { 
+    public Grille() { /*Cette méthode permet d'assigner à chaques cellules 
+lumineusesdes du plateau de jeu(un tableau de dimension 5x5), des coordonnées 
+en fonction de i et j*/
         for (int i = 0; i<5; i++){ //ligne 
             for (int j = 0; j<5; j++){ //colonne
                 PlateauDeJeu[i][j] = new CelluleLumineuse();
@@ -20,11 +22,12 @@ public class Grille { //Création du tableau 5x5
         }
     }      
     
-    public void ChangeEtat(int i , int j) {
+    public void ChangeEtat(int i , int j) { 
         PlateauDeJeu[i][j].ChangeEtat();
     }
   
-    public void afficherGrilleSurConsole() {
+    public void afficherGrilleSurConsole() { /*Cette méthode permet d'afficher
+la grille de jeu entièrement dans la console*/
         for (int i=4;i>=0;i--){
             System.out.print("\n");
             for (int j=4;j>=0;j--){
@@ -33,7 +36,8 @@ public class Grille { //Création du tableau 5x5
         }
     } 
     
-    public boolean Grilleteinte() { 
+    public boolean Grilleteinte() { /*Cette méthode permet finir la partie, si
+toute la grille de jeu est éteinte alors l'utilisateur remporte la partie*/
         for (int i = 0; i<5; i++){ //ligne 
             for (int j = 0; j<5; j++){ //colonne
                 if (PlateauDeJeu[i][j].EtatCelluleLumineuse()==true) {

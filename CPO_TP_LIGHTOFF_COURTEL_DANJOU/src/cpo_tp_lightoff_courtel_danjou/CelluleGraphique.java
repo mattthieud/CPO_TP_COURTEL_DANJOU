@@ -22,7 +22,9 @@ public class CelluleGraphique extends JButton {
     }
     
     @Override
-    public void paintComponent (Graphics G) {
+    public void paintComponent (Graphics G) { /*Création de la méthode 
+paintComponent qui permet d'attribuer les images.png préalablement importer 
+ci-dessus aux états de cellules lumineuses dans l'interface graphique*/
         super.paintComponent(G);
         if (celluleAssociee.EtatCelluleLumineuse() == false) {
             setIcon(img_eteinte);

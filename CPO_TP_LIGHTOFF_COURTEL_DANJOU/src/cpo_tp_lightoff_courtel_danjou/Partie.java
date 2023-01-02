@@ -21,7 +21,8 @@ public class Partie {
         this.plateau = new Grille();
     }
     
-    public void placerCelluleLumineuse() { 
+    public void placerCelluleLumineuse() { /*Cette méthode permet de placer 
+aléatoirement des cellules lumineuses allumées dans la grille de jeu éteinte*/ 
         for (int i = 0; i<5; i++){ //ligne 
            for (int j = 0; j<5; j++){ //colonne
                 if (Math.random()>0.5){ 
@@ -31,7 +32,9 @@ public class Partie {
         }    
     } 
 
-    public void action(int x, int y) {
+    public void action(int x, int y) { /*Cette méthode permet de jouer(échanger 
+l'état des cellules lumineuses) la case choisie ainsi que celles qui lui sont 
+adjacentes*/
         grille_jeu.ChangeEtat(x, y);
         if (x < 5 - 1) {
             grille_jeu.ChangeEtat(x+1, y);
@@ -47,7 +50,8 @@ public class Partie {
         }
     }  
       
-    public void LancerPartie() {
+    public void LancerPartie() { /*Cette méthode permet de lancer une partie 
+dans la console*/
         grille_jeu.afficherGrilleSurConsole();
         System.out.print("\n");
     }

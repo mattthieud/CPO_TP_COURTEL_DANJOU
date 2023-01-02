@@ -18,7 +18,13 @@ public class Interface_Graphique extends javax.swing.JFrame {
     /**
      * Creates new form Interface_Graphique
      */
-    public Interface_Graphique() {
+    
+    public Interface_Graphique() { /*Cette méthode permet une fois la partie 
+démarrer de cliquer directement sur les cases de la grille de jeu dans 
+l'interface graphique grâce à la méthode "actionListener" et permet de terminer 
+la partie(victoire), si la grille de jeu est complétement éteintes de façon 
+sychronisée, un message est annoncé à l'utilisateur qu'il a remporté la partie. 
+Suite à cela, le bouton "Lancer Partie" est réactiver afin de jouer à nouveau*/ 
         initComponents(); 
         for (int i = 4; i >= 0; i--) {
             for (int j = 0; j < 5; j++) {
@@ -44,7 +50,8 @@ public class Interface_Graphique extends javax.swing.JFrame {
         }
     } 
     
-    public void placerCelluleLumineuse() { 
+    public void placerCelluleLumineuse() { /*Cette méthode permet de placer 
+aléatoirement des cellules lumineuses allumées dans la grille de jeu éteinte*/ 
         for (int i = 0; i<5; i++){ //ligne 
            for (int j = 0; j<5; j++){ //colonne
                 if (Math.random()>0.5){ 
@@ -54,7 +61,9 @@ public class Interface_Graphique extends javax.swing.JFrame {
         }    
     } 
 
-    public void action(int x, int y) {
+    public void action(int x, int y) {  /*Cette méthode permet de jouer(échanger 
+l'état des cellules lumineuses) la case choisie ainsi que celles qui lui sont 
+adjacentes*/
         grille_jeu.ChangeEtat(x, y);
         if (x < 5 - 1) {
             grille_jeu.ChangeEtat(x+1, y);
@@ -70,7 +79,8 @@ public class Interface_Graphique extends javax.swing.JFrame {
         }
     }  
       
-    public void initialiserPartie() {
+    public void initialiserPartie() { /*Cette méthode permet d'initialiser une partie 
+avec son interface graphique*/
         this.placerCelluleLumineuse(); 
     }
 
